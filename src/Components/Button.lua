@@ -49,7 +49,7 @@ return function(Theme, Parent, DialogCheck)
 		}),
 		New("UIStroke", {
 			ApplyStrokeMode = Enum.ApplyStrokeMode.Border,
-			Transparency = 0.65,
+			Transparency = 0.5,
 			ThemeTag = {
 				Color = "DialogButtonBorder",
 			},
@@ -60,16 +60,16 @@ return function(Theme, Parent, DialogCheck)
 
 	local Motor, SetTransparency = Creator.SpringMotor(1, Button.HoverFrame, "BackgroundTransparency", DialogCheck)
 	Creator.AddSignal(Button.Frame.MouseEnter, function()
-		SetTransparency(0.97)
+		SetTransparency(0.9)
 	end)
 	Creator.AddSignal(Button.Frame.MouseLeave, function()
 		SetTransparency(1)
 	end)
 	Creator.AddSignal(Button.Frame.MouseButton1Down, function()
-		SetTransparency(1)
+		SetTransparency(0.8)
 	end)
 	Creator.AddSignal(Button.Frame.MouseButton1Up, function()
-		SetTransparency(0.97)
+		SetTransparency(0.9)
 	end)
 
 	return Button
